@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="menuHandler"
+            type="com.walle.mvvmdemo.MenuHandler"/>
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="事件处理"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/attribute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="@{menuHandler.onClick}"
+        android:text="属性设置"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/converter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="转换器"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="Include"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/viewstub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="ViewStub"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="登陆DEMO"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{menuHandler.onClick}"
+        android:text="RecycleView"
+        />
+
+</LinearLayout>
+</layout>

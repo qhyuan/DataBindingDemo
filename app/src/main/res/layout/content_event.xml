@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.support.v7.widget.AppCompatButton"/>
+        <import type="com.walle.mvvmdemo.event.MethodHandler"/>
+        <import type="com.walle.mvvmdemo.event.ListenerHandler"/>
+        <variable
+            name="msg"
+            type="String"/>
+       <variable
+           name="methodHandler"
+           type="MethodHandler"/>
+        <variable
+            name="listenerHandler"
+            type="ListenerHandler"/>
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{methodHandler.myOnClick}"
+        android:text="Method References"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(thisView)->listenerHandler.myListener((AppCompatButton)thisView,msg)}"
+        android:text="Listener Bindings"
+        />
+
+</LinearLayout>
+</layout>

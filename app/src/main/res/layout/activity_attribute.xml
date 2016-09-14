@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="attributeModel"
+            type="com.walle.mvvmdemo.attribute.AttributeModel"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:onTouchListener="@{attributeModel.touchListener}"
+            android:text="自动赋值"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/rename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:myTouch="@{attributeModel.touchListener}"
+            android:text="重命名"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:myTouch="@{attributeModel.touchListener}"
+            android:text="自定义"
+            />
+    </LinearLayout>
+</layout>
